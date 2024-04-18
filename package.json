@@ -9,6 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "start": "serve build -s -n -L -p $PORT"
+    
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
