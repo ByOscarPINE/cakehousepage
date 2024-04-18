@@ -1,0 +1,236 @@
+  .button-container {
+
+    display: none;
+
+    @media screen and (max-width: 768px){
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      background-color: rgba(245, 73, 144);
+      width: 100%;
+      height: 50px;
+      align-items: center;
+      justify-content: space-around;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+            rgba(245, 73, 144, 0.5) 5px 10px 15px; 
+    }
+  }
+  
+  .button {
+    outline: 0 !important;
+    border: 0 !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    transform: translateY(-3px);
+  }
+  
+  .icon {
+    font-size: 20px;
+  }
+
+
+
+
+  .bbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20\px;
+    gap: 15px;
+    background-color: #7a7676;
+    outline: 3px #181717 solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .bbutton .text {
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    transition: 400ms;
+  }
+  
+  .bbutton:hover {
+    background-color: transparent;
+  }
+  
+  .bbutton:hover .text {
+    color: #181717;
+  }
+  
+  .bbutton:hover svg path {
+    fill: #181717;
+  }
+
+
+
+  
+
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Titillium Web", sans-serif;
+  }
+  
+  :root {
+    --mainColor: #29335c;
+    --mainColorLight: #5767aa;
+    --secondaryColor: #db2b39;
+    --textColor: #eee;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+  }
+  
+  nav a {
+    margin: 0 1rem;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: var(--secondaryColor);
+  }
+  
+  header .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+  }
+  
+  header div,
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    header .nav-btn {
+      visibility: visible;
+      opacity: 1;
+    }
+  
+    header nav {
+      position: fixed;
+      top: -100vh;
+      left: 0;
+      height: 30%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: var(--mainColor);
+      transition: 1s;
+    }
+  
+    header .responsive_nav {
+      transform: translateY(100vh);
+    }
+  
+    nav .nav-close-btn {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+  
+    nav a {
+      font-size: 1.5rem;
+    }
+  }
+
+  
+
+  .select {
+    width: fit-content;
+    cursor: pointer;
+    position: relative;
+    transition: 300ms;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .selected {
+    background-color: #2a2f3b;
+    padding: 5px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 100000;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .arrow {
+    position: relative;
+    right: 0px;
+    height: 10px;
+    transform: rotate(-90deg);
+    width: 25px;
+    fill: white;
+    z-index: 100000;
+    transition: 300ms;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #2a2f3b;
+    position: relative;
+    top: -100px;
+    opacity: 0;
+    transition: 300ms;
+  }
+  
+  .select:hover > .options {
+    opacity: 1;
+    top: 0;
+  }
+  
+  .select:hover > .selected .arrow {
+    transform: rotate(0deg);
+  }
+  
+  .option {
+    border-radius: 5px;
+    padding: 5px;
+    transition: 300ms;
+    background-color: #2a2f3b;
+    width: 150px;
+    font-size: 15px;
+  }
