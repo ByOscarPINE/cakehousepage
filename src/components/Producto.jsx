@@ -144,7 +144,7 @@ const Button = styled.button`
 
       //Hacer la reserva de un producto
       const reservation = () => {
-        axios.post('http://localhost:3000/makeReservation', { productId, category, username})
+        axios.post('https://nodejs-production-54536.up.railway.app/makeReservation', { productId, category, username})
         .then(response => {
           console.log('Success:', response.data);
           setProductId(producto.id);
